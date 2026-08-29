@@ -1,0 +1,84 @@
+# ORIGYM Content Writing & Layout Skill
+
+一个面向 Codex 的公众号与小红书内容 Skill。它把来源约束、自然中文、平台原生改写、移动端排版判断和低颗粒配图提示词放在同一个 advisory 适配层中。
+
+当前固定版本：`v0.1.0`。
+
+## 适用场景
+
+- 把已确认的研究、媒体观察、社区故事或品牌事实写成微信公众号长文。
+- 把同一母题重组为小红书 1080×1440 图文，而不是机械缩写公众号正文。
+- 审阅中文稿件中的模板化 AI 表达、翻译腔、机械排比和假口语。
+- 规划或审阅健康、训练与饮食内容的配图提示词，避免全局颗粒、旧印刷和塑料感。
+- 对现有公众号 HTML、小红书逐页稿或移动端截图提供 advisory QA。
+
+## 核心规则
+
+1. 人物、数字、经历、结果和品牌能力必须来自当前来源；未知信息保持 `null` 或进入人工核对项。
+2. 研究证据、媒体观察、社区故事、品牌事实和编辑判断保持分类，公开帖子不能改写成品牌用户反馈。
+3. 中文表达优先具体名词、动作和自然节奏，不靠“先说结论”“不是 A 而是 B”或网络热梗制造人味。
+4. 公众号和小红书共享事实与边界，但分别设计标题、开头、结构、视觉任务和行动。
+5. 食物、器械和空间优先自然编辑摄影；抽象机制使用当代数字编辑插画。同组图片不混用媒介，不继承旧图的全局颗粒。
+6. Skill 只提供 advisory。它不拥有内容状态、SQLite、审批、renderer、导出、登录或发布权限。
+
+## 安装
+
+使用 Agent Skills CLI：
+
+```bash
+npx skills add cyz646471-hub/origym-content-writing-layout-skill --skill origym-content-writing-layout -g
+```
+
+也可以手动安装：
+
+```bash
+git clone https://github.com/cyz646471-hub/origym-content-writing-layout-skill.git
+mkdir -p ~/.codex/skills
+cp -R origym-content-writing-layout-skill/skills/origym-content-writing-layout ~/.codex/skills/
+```
+
+重新打开 Codex 会话后即可调用。
+
+## 使用示例
+
+```text
+使用 $origym-content-writing-layout，把这份证据表写成公众号文章，并检查来源边界和中文 AI 味。
+```
+
+```text
+使用 $origym-content-writing-layout，把当前正文改成小红书 3:4 图文。标题、封面和第一页不要重复；人物、数字、经历和结果不得超出来源。
+```
+
+```text
+使用 $origym-content-writing-layout，为这篇健康科普规划三张配图提示词。不要全局颗粒、纸张噪点、复古印刷或 CGI 塑料感。
+```
+
+## 目录
+
+```text
+skills/origym-content-writing-layout/
+├── SKILL.md
+└── references/
+    ├── chinese-copy.md
+    ├── editorial-taste.md
+    ├── image-prompts.md
+    ├── wechat.md
+    └── xiaohongshu.md
+```
+
+`SKILL.md` 负责路由和权限边界；详细写作、视觉和平台规范按任务逐步加载。
+
+## 可选协作 Skill
+
+- [`self-media-platform-copywriting`](https://github.com/yanhua1010/self-media-content-workflow) 可作为平台初稿协作者，但不接入其总状态编排、delivery 或 publisher。
+- [`xiaohongshu-title`](https://github.com/mengke-wang/xiaohongshu-ai-workbench) 只用于标题诊断和方向发散，不采用强制数量、人称或数字公式。
+
+外部 Skill 的结果仍须通过本 Skill 的来源回归、自然中文与平台 QA。
+
+## 版本与校验
+
+- `VERSION` 保存当前语义版本。
+- `CHECKSUMS.sha256` 固定 Skill 和参考文件。
+- Git tag `v0.1.0` 对应首个冻结版本。
+
+任何规则变化都应更新版本、重新生成校验值，并重新运行 Skill 验证。
