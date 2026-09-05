@@ -10,7 +10,7 @@
 
 ### `supplement-topic`（用户已有方向）
 
-围绕用户主题，在 `/home/ethan/CHI-Papers/04-健康情报` 中用关键词检索相关的每日简报、主题页和来源笔记，再用网络检索补齐当前权威来源。只返回能帮助当前内容的事实、痛点和边界；没有相关材料时直接说明并继续网络核验，不扩张成新的候选雷达。
+围绕用户主题，在 `Z:/Projects/chi-papers/04-健康情报` 中用关键词检索相关的每日简报、主题页和来源笔记，再用网络检索补齐当前权威来源。只返回能帮助当前内容的事实、痛点和边界；没有相关材料时直接说明并继续网络核验，不扩张成新的候选雷达。
 
 ### `radar-only`（每日默认）
 
@@ -18,7 +18,7 @@
 
 ### `develop-lead`
 
-只在调用方明确配置该模式，或明确选择某条候选时运行。读取 `full-content-workflow.md`，继续完成小红书证据包、文案、最新视觉生图、3×2 排版和贯穿式复核；不得越过评审与批准门。
+只在调用方明确配置该模式，或明确选择某条候选时运行。读取 `full-content-workflow.md`，继续完成小红书证据包、文案、最新摄影编辑首页／内页成图和贯穿式复核；不得越过评审与批准门。
 
 用户给出主题时默认 `supplement-topic`；没有主题或明确要求每日选题时使用 `radar-only`。
 
@@ -116,11 +116,11 @@ Reddit 等公开社区用于发现问题、语言、情境和个体故事。它�
 
 ## 本地补充入口
 
-- 健康 Obsidian：`/home/ethan/CHI-Papers/04-健康情报`
+- 健康 Obsidian：`Z:/Projects/chi-papers/04-健康情报`
 - 每日简报：`每日简报/YYYY-MM-DD.md`
 - 来源笔记：`来源笔记/`
 - 主题关系：`主题/`
-- 每日任务定义：`/home/ethan/projects/daily-arrangement/automation/health-obsidian-prompt.md`
-- 运行记录：`/home/ethan/projects/daily-arrangement/health-obsidian-runs/`
+- 每日任务定义：`Z:/Projects/daily-arrangement/automation/health-obsidian-prompt.md`
+- 运行记录：`Z:/Projects/daily-arrangement/health-obsidian-runs/`
 
 只读取当前主题需要的笔记，不扫描整个 vault，也不触发或修改每日自动化，除非用户明确要求运行或维护该任务。

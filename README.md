@@ -1,8 +1,8 @@
 # ORIGYM Content Writing & Layout Skill
 
-面向 Codex 的 ORIGYM 小红书内容生产 Skill。用户选题优先，健康 Obsidian、每日情报和网络检索负责补充；随后完成去 AI 味文案、最新视觉生图、3×2 中文卡片排版、贯穿式复核和 Z 盘交付。
+面向 Codex 的 ORIGYM 小红书内容生产 Skill。用户选题优先，健康 Obsidian、每日情报和网络检索负责补充；随后完成去 AI 味文案、摄影编辑封面／内页成图、贯穿式复核和 Z 盘交付。
 
-当前版本：`v0.6.0`。
+当前版本：`v0.7.1`。
 
 ## 当前唯一流程
 
@@ -10,7 +10,7 @@
 2. 选题信息补充；
 3. 小红书文案与 hashtags；
 4. `awesome-gpt-image-2` 构图参考＋`imagegen` 生图；
-5. 最新 3×2 中文卡片排版；
+5. 照片与中文排版一体的封面／内页成图；
 6. 受众、来源、人体和器械持续复核；
 7. Z 盘 review/final 素材管理。
 
@@ -18,23 +18,23 @@
 
 ## 最新视觉
 
-- 半写实人物＋轻插画质感；
-- 米白、炭黑、砖红；
+- 明亮自然的专业健身房摄影编辑页面；
+- 暖白、炭黑、浅米色和杏橙手绘标注；
 - ORIGYM 专业健身房；
-- 3×2 六宫格和真实中文；
-- 成年中国女性、无标鸭舌帽、舒适合体运动背心、运动短裤和包头训练鞋；
+- 封面／内页关系、中文衬线大标题和圆角信息区；
+- 同一位成年中国女性、自然高马尾、白色圆领短袖训练上衣、浅灰训练长裤和包头训练鞋；
 - 松弛自洽的本命感、健康有力的力量感、坦荡进取的少女野心；
 - 不使用白瘦幼、幼态大眼、媚态摆拍、夸张腰臀、解剖图、虚影或身材/年龄焦虑；
 - 保留原生画布，不拉伸、裁切或放大。
 
 ## 当前本地入口
 
-- 健康 Obsidian：`/home/ethan/CHI-Papers/04-健康情报`
-- 每日健康任务：`/home/ethan/projects/daily-arrangement/automation/health-obsidian-prompt.md`
-- 内容项目：`/home/ethan/projects/content-creation-workflow`
-- Z 盘：`/mnt/z/内容产出输出`
+- 健康 Obsidian：`Z:/Projects/chi-papers/04-健康情报`
+- 每日健康任务：`Z:/Projects/daily-arrangement/automation/health-obsidian-prompt.md`
+- 内容项目：`Z:/Projects/content-creation-workflow`
+- Z 盘：`Z:/内容产出输出`
 - 图片：`awesome-gpt-image-2` ＋ `imagegen`
-- 排版：每个主题基于固定六宫格建立原生 HTML/CSS renderer
+- 排版：遵循当前摄影编辑模板直接生成完整页面
 - QA：Playwright、原图目视检查和 SHA-256
 
 详细入口见 `references/local-tools-and-files.md`。
@@ -60,8 +60,8 @@
 npx skills add cyz646471-hub/origym-content-writing-layout-skill --skill origym-content-writing-layout -g
 ```
 
-本机维护源：`/home/ethan/projects/origym-content-writing-layout-skill/skills/origym-content-writing-layout`
-安装副本：`/home/ethan/.codex/skills/origym-content-writing-layout`
+本机维护源：`Z:/Projects/origym-content-writing-layout-skill/skills/origym-content-writing-layout`
+安装副本：`<CODEX_HOME>/skills/origym-content-writing-layout`
 
 修改后同步两者并运行 Skill 验证。
 
@@ -85,6 +85,6 @@ skills/origym-content-writing-layout/
 
 - `VERSION` 保存语义版本；
 - `CHECKSUMS.sha256` 固定 Skill 和参考文件；
-- `v0.6.0` 停用旧工作流，将生产范围收束为最新视觉下的小红书单平台，并补充本命感、力量感和少女野心人物规范。
+- `v0.7.1` 对齐已采用的摄影编辑视觉与人物规则，并将本地维护入口迁到 Windows。
 
 规则变化后更新版本、重新生成校验值，并运行 `quick_validate.py`。
